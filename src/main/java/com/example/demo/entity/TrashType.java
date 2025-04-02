@@ -10,6 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,8 +27,9 @@ public class TrashType {
 	private Long id;
 
 	@Column(nullable = false, unique = true)
-	private String type;
+	private String name;
 
 	@OneToMany(mappedBy = "trashType")
+	@JsonIgnore
 	private List<TrashSchedule> trashSchedules;
 }

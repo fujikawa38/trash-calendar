@@ -10,6 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,5 +30,6 @@ public class Ward {
 	private String name;
 
 	@OneToMany(mappedBy = "ward")
+	@JsonIgnore
 	private List<Town> towns;
 }

@@ -35,5 +35,5 @@ public class TrashSchedule {
 	private String weekOfMonth;
 
 	@Column(nullable = false)
-	private String dayOfWeek;
+	private String collectionDay;
 }
