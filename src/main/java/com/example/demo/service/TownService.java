@@ -19,4 +19,8 @@ public class TownService {
 		return townRepository.findByWardId(wardId);
 	}
 
+	public List<Town> getAllTowns() {
+		return townRepository.findAll();
+	}
+
 }
