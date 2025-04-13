@@ -12,6 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -31,8 +33,10 @@ public class Town {
 
 	@ManyToOne
 	@JoinColumn(name = "ward_id", nullable = false)
+	@JsonIgnore
 	private Ward ward;
 
 	@OneToMany(mappedBy = "town")
+	@JsonIgnore
 	private List<TrashSchedule> trashSuchedules;
 }

@@ -16,7 +16,7 @@ public class TownService {
 	}
 
 	public List<Town> getTownsByWard(Long wardId) {
-		return townRepository.findByWardId(wardId);
+		return townRepository.findByWardIdOrderByIdAsc(wardId);
 	}
 
 	public List<Town> getAllTowns() {
