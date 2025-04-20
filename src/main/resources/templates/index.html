@@ -2,11 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 	<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.css" rel="stylesheet">
 	<title>千葉市ごみの日カレンダー</title>
 </head>
 <body>
 	<h1>千葉市ごみの日カレンダー</h1>
+	
+	<div>
+		<input type="text" id="searchInput" placeholder="品目を入力">
+		<button type="button" id="searchButton">検索</button>
+		<div id="results" style="margin-top: 10px;"></div>
+	</div>
 	
 	<form action="#" method="get">
 		<label for="ward">区を選択：</label>
@@ -28,6 +35,7 @@
 	<div id="calendar" style="margin-top: 30px;"></div>
 
 	<script src="/js/ward-town.js"></script>
+	<script src="/js/search.js"></script>
 	<script src="/js/calendar.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.5/main.min.js"></script>
 </body>

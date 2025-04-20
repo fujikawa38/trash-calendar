@@ -91,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function () {
 					2: '#87CEFA',
 					3: '#FFA500',
 					4: '#ADFF2F',
-					5: '#1E90FF' 
+					5: '#1E90FF',
+					6: '#1E90FF'
 				};
 
 				const year = startDate.getFullYear();

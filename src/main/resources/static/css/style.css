@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.burnable {
+	color: #FF4C4C;
+}
+
+.petbottle {
+	color: #87CEFA;
+}
+
+.paper {
+	color: #FFA500;
+}
+
+.leaf {
+	color: #ADFF2F;
+}
+
+.nonburnable {
+	color: #1E90FF;
+}
+
+.hazardous {
+	color: #1E90FF;
+}
+
+.bulky {
+	color: #808080;
+}
+
+.other {
+	color: #808080;
+}
