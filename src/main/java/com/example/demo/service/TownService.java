@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Town;
+//import com.example.demo.entity.Town;
+import com.example.demo.model.Town;
 import com.example.demo.repository.TownRepository;
 
 @Service
@@ -15,8 +16,12 @@ public class TownService {
 		this.townRepository = townRepository;
 	}
 
-	public List<Town> getTownsByWard(Long wardId) {
-		return townRepository.findByWardIdOrderByIdAsc(wardId);
+	//	public List<Town> getTownsByWard(Long wardId) {
+	//		return townRepository.findByWardIdOrderByIdAsc(wardId);
+	//	}
+
+	public List<Town> getTownsByWard(String wardId) {
+		return townRepository.findByWardId(wardId);
 	}
 
 	public List<Town> getAllTowns() {

@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Item;
+//import com.example.demo.entity.Item;
+import com.example.demo.model.Item;
 import com.example.demo.repository.ItemRepository;
 
 @Service

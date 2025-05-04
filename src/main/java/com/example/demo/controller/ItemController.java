@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Item;
+//import com.example.demo.entity.Item;
+import com.example.demo.model.Item;
 import com.example.demo.repository.ItemRepository;
 
 @RestController

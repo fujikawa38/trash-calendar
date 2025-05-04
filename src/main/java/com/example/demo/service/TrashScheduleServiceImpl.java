@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.TrashSchedule;
+//import com.example.demo.entity.TrashSchedule;
+import com.example.demo.model.TrashSchedule;
 import com.example.demo.repository.TrashScheduleRepository;
 
 @Service
@@ -15,8 +16,13 @@ public class TrashScheduleServiceImpl implements TrashScheduleService {
 		this.trashScheduleRepository = trashScheduleRepository;
 	}
 
+	//	@Override
+	//	public List<TrashSchedule> getScheduleByTown(Long townId) {
+	//		return trashScheduleRepository.findByTownId(townId);
+	//	}
+
 	@Override
-	public List<TrashSchedule> getScheduleByTown(Long townId) {
+	public List<TrashSchedule> getScheduleByTown(String townId) {
 		return trashScheduleRepository.findByTownId(townId);
 	}
 
