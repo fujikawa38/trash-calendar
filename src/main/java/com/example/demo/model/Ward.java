@@ -1,10 +1,7 @@
 package com.example.demo.model;
 
 import org.springframework.data.annotation.Id;
-//import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-//import com.example.demo.entity.Town;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,8 +17,5 @@ public class Ward {
 	private String id;
 
 	private String name;
-
-	//	@DBRef
-	//	private List<Town> towns;
 
 }

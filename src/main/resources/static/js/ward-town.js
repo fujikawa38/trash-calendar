@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 document.addEventListener('DOMContentLoaded', function() {
 	const wardSelect = document.getElementById('ward');
 	const townSelect = document.getElementById('town');

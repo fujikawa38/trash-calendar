@@ -35,6 +35,7 @@ li {
 .town_name {
 	font-size: 1.5em;
 	color: #008000;
+	font-weight: bold;
 }
 
 #calendar {

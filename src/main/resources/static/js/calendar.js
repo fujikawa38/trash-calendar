@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 document.addEventListener('DOMContentLoaded', function () {
 	const calendarEl = document.getElementById('calendar');
 	const townSelect = document.getElementById('town');
