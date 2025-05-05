@@ -2,10 +2,10 @@ package com.example.demo.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import com.example.demo.entity.Item;
+import com.example.demo.model.Item;
 
-public interface ItemRepository extends JpaRepository<Item, Long> {
+public interface ItemRepository extends MongoRepository<Item, String> {
 	List<Item> findByNameContaining(String keyword);
 }

@@ -9,19 +9,19 @@
 <body>
 	<h1>千葉市ごみの日カレンダー</h1>
 	
-	<div>
+	<div class="search">
 		<input type="text" id="searchInput" placeholder="品目を入力">
 		<button type="button" id="searchButton">検索</button>
-		<div id="results" style="margin-top: 10px;"></div>
+		<div id="results"></div>
 	</div>
 	
-	<form action="#" method="get">
-		<label for="ward">区を選択：</label>
+	<form action="#" method="get" class="select">
+		<label for="ward" class="label">区を選択：</label>
 		<select id="ward" name="ward">
 			<option value="">-- 選択してください --</option>
 			<option th:each="ward : ${wards}" th:value="${ward.id}" th:text="${ward.name}"></option>
 		</select>
-		<label for="town">町丁を選択：</label>
+		<label for="town" class="label">町丁を選択：</label>
 		<select id="town" name="town">
 			<option value="">-- 選択してください --</option>
 		</select>
@@ -29,10 +29,10 @@
 		<button type="submit" id="showCalendar">カレンダーを表示</button>
 	</form>
 	
-	<div th:if="${selectedWard != null} and ${selectedTown != null}">
-		選択中の地域：<span th:text="${selectedWard + ' ' + selectedTown}"></span>
+	<div th:if="${selectedWard != null} and ${selectedTown != null}" class="area">
+		選択中の地域：<span th:text="${selectedWard + ' ' + selectedTown}" class="town_name"></span>
 	</div>
-	<div id="calendar" style="margin-top: 30px;"></div>
+	<div id="calendar"></div>
 
 	<script src="/js/ward-town.js"></script>
 	<script src="/js/search.js"></script>

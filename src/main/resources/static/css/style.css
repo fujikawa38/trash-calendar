@@ -1,5 +1,55 @@
 @charset "UTF-8";
 
+h1 {
+	background: #008000;
+	text-align: center;
+	padding: 10px 0;
+	color: #fff;
+}
+
+li {
+	font-size: 0.8em;
+	text-align: left;
+}
+
+.search {
+	text-align: right;
+}
+
+#searchButton {
+	margin-right: 20px;
+}
+
+.text {
+	margin-top: 0;
+	margin-right: 20px;
+	font-size: 0.8em;
+	color: #f00;
+}
+
+#results {
+	margin-top: 10px;
+}
+
+.select {
+	margin: 20px 0;
+}
+
+.label, .area {
+	margin-left: 20px;
+}
+
+.town_name {
+	font-size: 1.5em;
+	color: #008000;
+	font-weight: bold;
+}
+
+#calendar {
+	margin-top: 30px;
+}
+
+/*calendar.js*/
 .burnable {
 	color: #FF4C4C;
 }

@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.entity.Town;
-import com.example.demo.entity.Ward;
+import com.example.demo.model.Town;
+import com.example.demo.model.Ward;
 import com.example.demo.repository.TownRepository;
 import com.example.demo.repository.WardRepository;
 
@@ -24,8 +24,8 @@ public class HomeController {
 	private TownRepository townRepository;
 
 	@GetMapping("/")
-	public String index(@RequestParam(value = "ward", required = false) Long wardId,
-			@RequestParam(value = "town", required = false) Long townId, Model model) {
+	public String index(@RequestParam(value = "ward", required = false) String wardId,
+			@RequestParam(value = "town", required = false) String townId, Model model) {
 		List<Ward> wards = wardRepository.findAll();
 		List<Town> towns = townRepository.findAll();
 		model.addAttribute("wards", wards);
