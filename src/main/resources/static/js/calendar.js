@@ -85,6 +85,15 @@ document.addEventListener('DOMContentLoaded', function () {
 					'Friday': 5,
 					'Saturday': 6
 				};
+				
+				const trashTypeNames = {
+					1: '可燃ごみ',
+					2: '資源物（びん・缶・ペットボトル）',
+					3: '資源物（古紙・布類）',
+					4: '資源物（木の枝・刈り草・葉）',
+					5: '不燃ごみ/有害ごみ',
+					6: '有害ごみ'
+				};
 
 				const trashTypeColors = {
 					1: '#FF4C4C',
@@ -104,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					if (weekday === undefined) return;
 
 					const color = trashTypeColors[trashType.id] || '#808080';
+					const name = trashTypeNames[trashType.id] || '不明';
 
 					if (weekOfMonth === 'Every') {
 						for (let day = 1; day <= 31; day++) {
@@ -111,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
 							if (date.getMonth() !== month) break;
 							if (date.getDay() === weekday) {
 								events.push({
-									title: trashType.name,
+									title: name,
 									start: formatDate(date),
 									color: color
 								});
@@ -122,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						const date = getNthWeekdayDate(year, month, nth, weekday);
 						if (date) {
 							events.push({
-								title: trashType.name,
+								title: name,
 								start: formatDate(date),
 								color: color
 							});

@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	searchButton.addEventListener('click', function () {
 		const keyword = searchInput.value.trim();
 		if (!keyword) {
-			searchResults.innerHTML = '<p>検索ワードを入力してください</p>';
+			searchResults.innerHTML = '<p class="text">検索ワードを入力してください</p>';
 			return;
 		}
 		
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(response => response.json())
 			.then(data => {
 				if (data.length === 0) {
-					searchResults.innerHTML = '<p>該当する品目がありません</p>';
+					searchResults.innerHTML = '<p class="text">該当する品目がありません</p>';
 					return;
 				}
 				
